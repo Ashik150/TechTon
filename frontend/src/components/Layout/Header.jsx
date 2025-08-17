@@ -120,7 +120,7 @@ const Header = ({ activeHeading }) => {
             <div>
               <Link to="/" onClick={() => window.location.reload()}>
                 <h1 className="text-[35px] leading-[1.2] 800px:text-[30px] text-[#4B5320] font-[600] capitalize ">
-                  GadgetMart
+                  TechTon
                 </h1>
               </Link>
             </div>
