@@ -13,7 +13,7 @@ const Hero = () => {
     >
       <div className={`${styles.section} w-[90%] 800px:w-[60%]`}>
         <h1 className="text-[35px] leading-[1.2] 800px:text-[60px] text-[#3d3a3a] font-[600] capitalize">
-          Gadget Mart
+          TechTon
         </h1>
         <p className="pt-5 text-[16px] font-[Poppins] font-[400] text-[#000000ba]">
           Whether you're building your dream PC, upgrading your gear, or looking
