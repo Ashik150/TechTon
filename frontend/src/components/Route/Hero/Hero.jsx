@@ -21,7 +21,7 @@ const Hero = () => {
           you need from powerful GPUs to sleek monitors, top of the line RAM,
           and more. Explore our <br /> wide range of high 
           quality tech products and find the perfect fit for your needs. Let's
-          power up your tech world!
+          power up your tech world by TechTon!
         </p>
         <Link to="/products" className="inline-block">
           <div className={`${styles.button} mt-5`}>
