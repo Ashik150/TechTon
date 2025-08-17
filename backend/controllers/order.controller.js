@@ -8,7 +8,6 @@ export const createOrder = async (req, res, next) => {
   try {
     const { cart, shippingAddress, user, totalPrice, paymentInfo } = req.body;
 
-    //   group cart items by shopId
     const shopItemsMap = new Map();
 
     for (const item of cart) {
@@ -19,7 +18,6 @@ export const createOrder = async (req, res, next) => {
       shopItemsMap.get(shopId).push(item);
     }
 
-    // create an order for each shop
     const orders = [];
 
     for (const [shopId, items] of shopItemsMap) {
@@ -170,7 +168,6 @@ export const acceptOrderRefund = async (req, res, next) => {
     });
 
     if (req.body.status === "Refund Success") {
-      // Deduct reward points (5% of order price)
       const refundPoints = Math.floor(order.totalPrice * 0.01);
       await User.findByIdAndUpdate(order.user._id, {
         $inc: { points: -refundPoints },
@@ -221,13 +218,11 @@ export const getProductCategoryDistribution = async (req, res, next) => {
   try {
     const userEmail = req.params.email;
 
-    // Fetch the delivered orders for the specified user
     const deliveredOrders = await Order.find({
       "user.email": userEmail,
       status: "Delivered",
     });
 
-    // If no orders are found
     if (!deliveredOrders || deliveredOrders.length === 0) {
       return res.status(404).json({
         success: false,
@@ -237,7 +232,6 @@ export const getProductCategoryDistribution = async (req, res, next) => {
 
     let categoryCount = {};
 
-    // Iterate through the orders and count the products in each category
     deliveredOrders.forEach((order) => {
       order.cart.forEach((item) => {
         const category = item.category; // Use 'category' based on your data
