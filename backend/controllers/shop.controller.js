@@ -72,7 +72,6 @@ export const activateShop = async (req, res, next) => {
         if (seller) {
             return next(new ErrorHandler("User already exists", 400));
         }
-        //console.log(name, email, password, avatar, zipCode, address, phoneNumber);
 
         seller = await Shop.create({
             name,
@@ -142,7 +141,7 @@ export const logoutShop = async (req, res, next) => {
 
         res.status(200).json({
             success: true,
-            message: "Logged out successfully",
+            message: "Logged out successfully.",
         });
     } catch (error) {
         return next(new ErrorHandler(error.message, 500));
@@ -154,7 +153,7 @@ export const getShopInfo = async (req, res, next) => {
         const shop = await Shop.findById(req.params.id);
 
         if (!shop) {
-            return next(new ErrorHandler("Shop not found", 404));
+            return next(new ErrorHandler("Shop not found. Please Try Again", 404));
         }
 
         res.status(200).json({
@@ -173,7 +172,7 @@ export const updateSeller = async (req, res, next) => {
         const shop = await Shop.findOne(req.seller._id);
 
         if (!shop) {
-            return next(new ErrorHandler("User not found", 400));
+            return next(new ErrorHandler("User not found. PLease Try Again", 400));
         }
 
         shop.name = name;
