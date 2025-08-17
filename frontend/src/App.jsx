@@ -60,7 +60,7 @@ import { get } from "mongoose";
 import ShopSettings from "./components/Shop/ShopSettings.jsx";
 import ShopWithDrawMoneyPage from "./pages/Shop/ShopWithDrawMoneyPage.jsx";
 import UserInbox from "./pages/UserInbox.jsx";
-import ChatBot from "./pages/ChatBot.jsx";
+//import ChatBot from "./pages/ChatBot.jsx";
 
 
 
@@ -149,13 +149,13 @@ function App() {
           <Route path="/events" element={<EventsPage />} />
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/product/:id" element={<ProductDetailsPage />} />
-          <Route
+          {/* <Route
             path="/chatbot"
             element={
                             <ChatBot />
             
             }
-          />
+          /> */}
           <Route
             path="profilepage"
             element={
