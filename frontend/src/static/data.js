@@ -16,10 +16,10 @@ export const navItems = [
     title: "Events",
     url: "/events",
   },
-  {
-    title: "ChatBot", 
-    url: "/chatbot",
-  },
+  // {
+  //   title: "ChatBot", 
+  //   url: "/chatbot",
+  // },
   {
     title: "FAQ",
     url: "/faq",
