@@ -149,13 +149,6 @@ function App() {
           <Route path="/events" element={<EventsPage />} />
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/product/:id" element={<ProductDetailsPage />} />
-          {/* <Route
-            path="/chatbot"
-            element={
-                            <ChatBot />
-            
-            }
-          /> */}
           <Route
             path="profilepage"
             element={
