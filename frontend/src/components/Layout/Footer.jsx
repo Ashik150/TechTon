@@ -42,7 +42,7 @@ const Footer = () => {
             style={{ filter: "brightness(0) invert(1)" }}
           /> */}
           <h1 className="text-[35px] leading-[1.2] 800px:text-[40px] text-[#018749] font-[600] capitalize">
-            Gadget Mart
+            TechTon
           </h1>
           <br />
           <p>The home and elements needeed to create beatiful products.</p>
