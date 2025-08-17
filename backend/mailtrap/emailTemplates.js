@@ -88,7 +88,7 @@ export const PASSWORD_RESET_REQUEST_TEMPLATE = `
     <p>Best regards,<br>TechTon</p>
   </div>
   <div style="text-align: center; margin-top: 20px; color: #888; font-size: 0.8em;">
-    <p>This is an automated message, please do not reply to this email.</p>
+    <p>This is an automated mail, please do not reply to this email.</p>
   </div>
 </body>
 </html>
