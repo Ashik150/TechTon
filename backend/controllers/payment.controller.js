@@ -7,10 +7,9 @@ export const processpayment = async (req, res, next) => {
         amount: req.body.amount,
         currency: "USD",
         metadata: {
-            company: "GadgetMart",
+            company: "TechTon",
         },
     });
-    //console.log(myPayment);
     res.status(200).json({
         success: true,
         client_secret: myPayment.client_secret,
