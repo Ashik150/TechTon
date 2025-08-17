@@ -35,12 +35,10 @@ import OrderDetailsPage from "./pages/OrderDetailsPage";
 import TrackOrderPage from "./pages/TrackOrderPage.jsx";
 import ShopAllRefunds from "./pages/Shop/ShopAllRefunds.jsx";
 import ShopSettingsPage from "./pages/Shop/ShopSettingsPage.jsx";
-//import ShopWithDrawMoneyPage from "./pages/Shop/ShopWithDrawMoneyPage.jsx";
 import ShopInboxPage from "./pages/Shop/ShopInboxPage.jsx";
 
 
 import LoadingSpinner from "./components/LoadingSpinner";
-//import SellerProtectedRoute from "./routes/SellerProtectedRoute.js";
 import Loader from "./components/Layout/Loader";
 
 import { Toaster } from "react-hot-toast";
@@ -60,7 +58,6 @@ import { get } from "mongoose";
 import ShopSettings from "./components/Shop/ShopSettings.jsx";
 import ShopWithDrawMoneyPage from "./pages/Shop/ShopWithDrawMoneyPage.jsx";
 import UserInbox from "./pages/UserInbox.jsx";
-//import ChatBot from "./pages/ChatBot.jsx";
 
 
 
