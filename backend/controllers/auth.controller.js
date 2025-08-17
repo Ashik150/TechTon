@@ -170,7 +170,7 @@ export const checkAuth = async (req, res) => {
     try {
         const user = await User.findById(req.userId);
         if (!user) {
-            return res.status(400).json({ success: false, message: "User not found" });
+            return res.status(400).json({ success: false, message: "User not found. PLease Try Again" });
         }
         res.status(200).json({
             success: true, user: {
@@ -191,14 +191,14 @@ export const updateUserInfo = async (req, res, next) => {
         const user = await User.findOne({ email }).select("+password");
 
         if (!user) {
-            return next(new ErrorHandler("User not found", 400));
+            return next(new ErrorHandler("User not found. Please Try Again", 400));
         }
 
         const isPasswordValid = await bcryptjs.compare(password, user.password);
 
         if (!isPasswordValid) {
             return next(
-                new ErrorHandler("Please provide the correct information", 400)
+                new ErrorHandler("Please provide the correct Password", 400)
             );
         }
 
