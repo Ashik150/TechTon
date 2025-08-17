@@ -91,7 +91,7 @@ export const getAllProduct = async (req, res, next) => {
     try {
         const products = await Product.find().sort({ createdAt: -1 });
         if (!products || products.length === 0) {
-            return next(new ErrorHandler('No products found', 404));  // Error if no products found
+            return next(new ErrorHandler('No products found', 404)); 
         }
 
         res.status(200).json({
