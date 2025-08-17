@@ -5,10 +5,8 @@ import ErrorHandler from '../Utils/ErrorHandler.js';
 export const createConversation = async (req, res, next) => {
     try {
         const { groupTitle, userId, sellerId } = req.body;
-        //console.log(groupTitle, userId, sellerId);
 
         const isConversationExist = await Conversation.find({ groupTitle });
-        //sconsole.log(isConversationExist);
         if (isConversationExist) {
             const conversation = isConversationExist;
             res.status(201).json({
