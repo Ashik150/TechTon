@@ -117,3 +117,20 @@ export const loginShop = async (req, res, next) => {
     }
 };
 
+export const getSeller = async (req, res, next) => {
+    try {
+        const seller = await Shop.findById(req.seller._id);
+
+        if (!seller) {
+            return next(new ErrorHandler("User doesn't exists", 400));
+        }
+
+        res.status(200).json({
+            success: true,
+            seller,
+        });
+    } catch (error) {
+        return next(new ErrorHandler(error.message, 500));
+    }
+};
+
