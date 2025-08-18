@@ -58,7 +58,7 @@ const ProfileSidebar = ({ setActive, active }) => {
           Refunds
         </span>
       </div>
-      <div
+      {/* <div
         className="flex items-center cursor pointer w-full mb-8"
         onClick={() => setActive(4) || navigate("/inbox")}
       >
@@ -70,11 +70,11 @@ const ProfileSidebar = ({ setActive, active }) => {
         >
           Inbox
         </span>
-      </div>
+      </div> */}
       <div
         className="flex items-center cursor pointer w-full mb-8"
         onClick={() => setActive(5)}
-      >
+      > 
         <MdOutlineTrackChanges size={20} color={active === 5 ? "green" : ""} />
         <span
           className={`pl-3 ${
