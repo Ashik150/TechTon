@@ -73,3 +73,25 @@ export const getEvents = async (req, res, next) => {
     }
 };
 
+export const deleteEvent = async (req, res, next) => {
+    try {
+        const event = await Event.findById(req.params.id);
+        if (!event) {
+            return next(new ErrorHandler('Event not found. Please Try Again', 400));
+        }
+        for (let i = 0; i < event.images.length; i++) {
+            const result = await cloudinary.uploader.destroy(
+                event.images[i].public_id
+            );
+        }
+
+        await Event.findByIdAndDelete(req.params.id);
+        res.status(200).json({
+            success: true,
+            message: 'Event has been deleted successfully!',
+        });
+    } catch (error) {
+        return next(new ErrorHandler(error.message, 400));
+    }
+};
+
