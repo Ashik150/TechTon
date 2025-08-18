@@ -134,3 +134,18 @@ export const getSeller = async (req, res, next) => {
     }
 };
 
+export const logoutShop = async (req, res, next) => {
+    try {
+        res.clearCookie("seller_token");
+
+        res.status(200).json({
+            success: true,
+            message: "Logged out successfully",
+        });
+    } catch (error) {
+        return next(new ErrorHandler(error.message, 500));
+    }
+};
+
+
+
