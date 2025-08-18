@@ -59,3 +59,17 @@ export const getAllEvents = async (req, res, next) => {
         return next(new ErrorHandler(error.message, 400));
     }
 };
+
+export const getEvents = async (req, res, next) => {
+    try {
+        const events = await Event.find({ shopId: req.params.id });
+
+        res.status(200).json({
+            success: true,
+            events,
+        });
+    } catch (error) {
+        return next(new ErrorHandler(error.message, 400));
+    }
+};
+
