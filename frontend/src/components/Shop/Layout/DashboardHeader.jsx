@@ -18,7 +18,7 @@ const DashboardHeader = () => {
           />
         </Link> */}
                 <h1 className="text-[35px] leading-[1.2] 800px:text-[40px] text-[#4B5320] font-[500] capitalize">
-                    Gadget Mart
+                    TechTon
                 </h1>
             </div>
             <div className="flex items-center">
